@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite" parallel="tests" >
+
+    <listeners>
+        <listener class-name="de.fti.framework.WebDriverListener" />
+    </listeners>
+
+    <test name="ChromeTest">
+        <parameter name="browser" value="CHROME" />
+        <classes>
+            <class name="de.fti.tests.BookingPageTest" />
+            <class name="de.fti.tests.DestinationPageTest"/>
+            <class name="de.fti.tests.EventPageTest"/>
+            <class name="de.fti.tests.HotelsPageTest"/>
+            <class name="de.fti.tests.QuickSearchButtonsTest"/>
+        </classes>
+    </test>
+
+    <test name="FirefoxTest">
+        <parameter name="browser" value="FIREFOX" />
+        <classes>
+            <class name="de.fti.tests.BookingPageTest" />
+            <class name="de.fti.tests.DestinationPageTest"/>
+            <class name="de.fti.tests.EventPageTest"/>
+            <class name="de.fti.tests.HotelsPageTest"/>
+            <class name="de.fti.tests.QuickSearchButtonsTest"/>
+        </classes>
+    </test>
+
+</suite>
